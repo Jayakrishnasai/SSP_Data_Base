@@ -8,12 +8,12 @@ stages:
     displayName: 'Deploy MongoDB to Kubernetes Namespace three-tier'
     steps:
     - task: Kubernetes@1
+      displayName: 'Deploy MongoDB to Kubernetes'
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: 'K8's_Connection'
+        kubernetesServiceEndpoint: K8s_Connection  # ✅ FIXED
         azureResourceGroup: 'dev-env'
         kubernetesCluster: 'dev-cluster'
         namespace: 'three-tier'
         command: 'apply'
         arguments: '-f DB/database.yml'
-      displayName: 'Deploy MongoDB to Kubernetes'
