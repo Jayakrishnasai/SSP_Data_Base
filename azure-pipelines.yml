@@ -11,7 +11,7 @@ stages:
       displayName: 'Deploy MongoDB to Kubernetes'
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: K8s_Connection  # ✅ FIXED
+        kubernetesServiceEndpoint: "K8's_Connection"   # ✅ Fixed with double quotes
         azureResourceGroup: 'dev-env'
         kubernetesCluster: 'dev-cluster'
         namespace: 'three-tier'
