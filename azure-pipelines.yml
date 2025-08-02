@@ -1,5 +1,5 @@
 pool:
-  name: 'dev-pool'
+  name: 'dev-access'
 
 stages:
 - stage: Deploy
