@@ -1,5 +1,5 @@
 pool:
-  name: 'Dev'
+  name: 'Dev_Pool'
 
 stages:
 - stage: Deploy
@@ -19,8 +19,8 @@ stages:
       inputs:
         connectionType: 'Kubernetes Service Connection'
         kubernetesServiceEndpoint: "k8's"
-        azureResourceGroup: 'Project'
-        kubernetesCluster: 'aks'
+        azureResourceGroup: 'Dev'
+        kubernetesCluster: 'Myaks'
         namespace: 'three-tier'
         command: 'apply'
         arguments: '-f DB/database.yml'
