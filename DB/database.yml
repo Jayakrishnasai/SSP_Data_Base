@@ -50,10 +50,11 @@ spec:
         volumeMounts:
         - name: mongo-data
           mountPath: /data/db
-      volumes:
-      - name: mongo-data
-        hostPath:
-          path: /customdbsolution
+        volumes:
+        - name: mongo-data
+          hostPath:
+            path: /customdbsolution
+
 ---
 apiVersion: v1
 kind: Service
