@@ -3,17 +3,16 @@ pool:
 
 stages:
 - stage: Deploy
+  displayName: 'Deploy Stage'
   jobs:
   - job: DeployMongoDB
     displayName: 'Deploy MongoDB to Kubernetes Namespace three-tier'
     steps:
     - task: Kubernetes@1
+      displayName: 'Deploy MongoDB to Kubernetes'
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: "k8's"
-        azureResourceGroup: 'Dev'
-        kubernetesCluster: 'Myaks'
+        kubernetesServiceEndpoint: "k8s"   # ❗Remove special character (no apostrophe)
         namespace: 'three-tier'
         command: 'apply'
         arguments: '-f DB/database.yml'
-      displayName: 'Deploy MongoDB to Kubernetes'
