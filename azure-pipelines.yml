@@ -10,7 +10,7 @@ stages:
     - task: Kubernetes@1
       inputs:
         connectionType: 'Kubernetes Service Connection'
-        kubernetesServiceEndpoint: 'k8sconnection'
+        kubernetesServiceEndpoint: 'k8s'
         azureResourceGroup: 'Dev'
         kubernetesCluster: 'Myaks'
         namespace: 'three-tier'
